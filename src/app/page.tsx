@@ -443,14 +443,14 @@ export default function AppPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-between items-start">
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <Link href="/" className="flex items-center space-x-4 mb-2"> {/* Increased space-x-2 to space-x-4 */}
+              <Link href="/" className="flex items-center space-x-4 mb-2">
                 <div className="relative w-24 h-8 flex items-center">
                   <Image 
                     src="/Filecoin.png"
                     alt="Filecoin Logo" 
                     width={24}
                     height={24}
-                    className="object-contain mr-2"  // Added margin-right for spacing
+                    className="object-contain mr-2" 
                   />
                   <span className="text-white mx-2">x</span>
                   <Image 

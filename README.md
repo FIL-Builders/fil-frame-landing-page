@@ -78,6 +78,15 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view your application.
 
+## Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- ShadcnUI
+- Radix UI
+
 ## Documentation
 
 Visit our documentation sections:
