@@ -52,10 +52,10 @@ export default function AppPage() {
   };
 
   const installCommands: Record<PackageManager, string> = {
-    npm: 'npm install @FIL-Builders/fil-frame',
-    yarn: 'yarn add @FIL-Builders/fil-frame',
-    pnpm: 'pnpm add @FIL-Builders/fil-frame',
-    bun: 'bun add @FIL-Builders/fil-frame'
+    npm: 'npx create-filecoin-app my-app',
+    yarn: 'yarn create filecoin-app my-app',
+    pnpm: 'pnpm create filecoin-app my-app',
+    bun: 'bunx create-filecoin-app my-app'
   };
 
   React.useEffect(() => {
@@ -67,27 +67,16 @@ export default function AppPage() {
     <div className="flex flex-col min-h-screen bg-[#0D0E12] text-gray-100">
       <header className="fixed top-0 z-50 w-full border-b border-[#2E3039] bg-[#1A1B26]/95 backdrop-blur">
         <div className="container mx-auto px-6 flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-4"> {/* Increased space-x-2 to space-x-4 */}
-            <div className="relative w-24 h-8 flex items-center">
+          <Link href="/" className="flex items-center space-x-4">
+            <div className="relative w-48 h-8">
               <Image 
-                src="/Filecoin.png"
-                alt="Filecoin Logo" 
-                width={32}
-                height={32}
-                className="object-contain mr-2"  // Added margin-right for spacing
-                priority
-              />
-              <span className="text-white mx-2">x</span> {/* Increased mx-1 to mx-2 */}
-              <Image 
-                src="/fil B icon.png"
-                alt="FIL-B Logo" 
-                width={32}
-                height={32}
+                src="/Filecoin x Fil-Builders.svg"
+                alt="Filecoin x FIL-Builders Logo" 
+                fill
                 className="object-contain"
                 priority
               />
             </div>
-            <span className="font-bold text-xl text-[#0090FF] leading-none">FIL-Frame</span>
           </Link>
           <nav className="flex items-center space-x-8">
             <Link href="#features" onClick={(e) => smoothScroll(e, 'features')} className="text-sm font-medium text-gray-300 hover:text-white">Features</Link>
@@ -290,7 +279,7 @@ export default function AppPage() {
               <FeatureCard
                 icon={<Cloud className="h-10 w-10 text-[#0090FF]" />}
                 title="FVM"
-                link="https://docs.filecoin.io/smart-contracts/fundamentals/basics/"
+                link="https://docs.filecoin.io/smart-contracts/fundamentals/the-fvm"
                 description="Build smart contracts on the Filecoin Virtual Machine (FVM) using TypeScript, or use your own smart contract for custom implementations."
               />
               <FeatureCard
@@ -302,7 +291,7 @@ export default function AppPage() {
               <FeatureCard
                 icon={<Zap className="h-10 w-10 text-[#0090FF]" />}
                 title="Smart Contracts"
-                link="https://docs.filecoin.io/smart-contracts/fundamentals/basics/"
+                link="https://docs.filecoin.io/smart-contracts/fundamentals"
                 description="Build smart contracts on the Filecoin network using TypeScript, or use your own smart contract for custom implementations."
               />
             </div>
@@ -346,7 +335,7 @@ export default function AppPage() {
                   />}
                   title="Akave"
                   description="Enterprise-grade storage solutions with advanced data management features"
-                  link="https://akave.io/"
+                  link="https://akave.ai/"
                 />
               </div>
             </div>
@@ -444,24 +433,15 @@ export default function AppPage() {
           <div className="flex flex-wrap justify-between items-start">
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <Link href="/" className="flex items-center space-x-4 mb-2">
-                <div className="relative w-24 h-8 flex items-center">
+                <div className="relative w-48 h-8">
                   <Image 
-                    src="/Filecoin.png"
-                    alt="Filecoin Logo" 
-                    width={24}
-                    height={24}
-                    className="object-contain mr-2" 
-                  />
-                  <span className="text-white mx-2">x</span>
-                  <Image 
-                    src="/fil B icon.png"
-                    alt="FIL-B Logo" 
-                    width={24}
-                    height={24}
+                    src="/Filecoin x Fil-Builders.svg"
+                    alt="Filecoin x FIL-Builders Logo" 
+                    fill
                     className="object-contain"
+                    priority
                   />
                 </div>
-                <span className="font-bold text-lg text-[#0090FF]">FIL-Frame</span>
               </Link>
               <p className="text-sm text-gray-400 mb-2">
                 Your quickstart for building decentralized apps on Filecoin with ready-to-use React components and TypeScript utilities.
@@ -498,7 +478,13 @@ export default function AppPage() {
                 <Image src="/Discord Icon.png" alt="Discord" width={20} height={20} className="text-gray-400 hover:text-white" />
               </Link>
               <Link href="https://x.com/FILBuilders" target="_blank" rel="noopener noreferrer">
-                <Image src="/Twitter icon.png" alt="Twitter" width={20} height={20} className="text-gray-400 hover:text-white" />
+                <Image 
+                  src="/X Social Media Icon.png" 
+                  alt="X (formerly Twitter)" 
+                  width={20} 
+                  height={20}
+                  className="opacity-60 hover:opacity-100 transition-opacity" 
+                />
               </Link>
             </div>
           </div>
