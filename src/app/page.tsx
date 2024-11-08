@@ -69,9 +69,9 @@ export default function AppPage() {
         <div className="container mx-auto px-6 flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-4">
             <div className="relative w-48 h-8">
-              <Image 
+              <Image
                 src="/Filecoin x Fil-Builders.svg"
-                alt="Filecoin x FIL-Builders Logo" 
+                alt="Filecoin x FIL-Builders Logo"
                 fill
                 className="object-contain"
                 priority
@@ -93,28 +93,28 @@ export default function AppPage() {
         <section className="bg-gradient-to-b from-[#1A1B26] to-[#0D0E12] py-32 relative overflow-hidden">
           {/* Brand geometric shapes */}
           <div className="absolute inset-0 pointer-events-none">
-            <Image 
+            <Image
               src="/Red Arrow.png"
               alt=""
               width={120}
               height={120}
               className="absolute top-[35%] right-[10%] transform -rotate-[45deg] opacity-15"
             />
-            <Image 
+            <Image
               src="/Blue Square.png"
               alt=""
               width={100}
               height={100}
               className="absolute top-[20%] left-[8%] transform rotate-[13.6deg] opacity-10"
             />
-            <Image 
+            <Image
               src="/Yellow Circle.png"
               alt=""
               width={90}
               height={90}
               className="absolute bottom-[35%] right-[15%] transform rotate-[10.38deg] opacity-10"
             />
-            <Image 
+            <Image
               src="/Red Star.png"
               alt=""
               width={80}
@@ -122,14 +122,14 @@ export default function AppPage() {
               className="absolute bottom-[25%] left-[12%] transform rotate-[7.07deg] opacity-10"
             />
           </div>
-          <motion.div 
+          <motion.div
             className="container mx-auto px-6 text-center"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
-            <motion.h1 
-              variants={itemVariants} 
+            <motion.h1
+              variants={itemVariants}
               className="font-balgin text-6xl mb-6 text-white uppercase tracking-none"
             >
               FIL-Frame
@@ -137,16 +137,16 @@ export default function AppPage() {
             <motion.p variants={itemVariants} className="text-xl mb-12 text-gray-300 max-w-2xl mx-auto">
               Your quickstart for building apps on Filecoin with ready-to-use React components and TypeScript utilities.
             </motion.p>
-            <motion.div variants={itemVariants} className="mb-12 max-w-xl mx-auto">
-              <Card className="bg-[#1E2029] border-[#2E3039] hover:border-[#0090FF] transition-all duration-300 shadow-lg shadow-black/10 overflow-hidden"> {/* Added overflow-hidden */}
+            {/* <motion.div variants={itemVariants} className="mb-12 max-w-xl mx-auto">
+              <Card className="bg-[#1E2029] border-[#2E3039] hover:border-[#0090FF] transition-all duration-300 shadow-lg shadow-black/10 overflow-hidden"> 
                 <CardContent className="p-0">
                   <div className="flex border-b border-[#2E3039]">
                     {Object.keys(installCommands).map((cmd, index) => (
                       <button
                         key={cmd}
                         className={`flex-1 p-2 text-sm font-medium flex items-center justify-center transition-colors
-                          ${activeTab === cmd 
-                            ? 'bg-[#2E3039] text-white' 
+                          ${activeTab === cmd
+                            ? 'bg-[#2E3039] text-white'
                             : 'text-gray-400 hover:text-white'
                           }
                           ${index === 0 ? 'rounded-tl-[calc(0.5rem-1px)]' : ''} 
@@ -175,21 +175,22 @@ export default function AppPage() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </motion.div> */}
+
             <motion.div variants={itemVariants} className="flex justify-center space-x-4">
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="bg-[#0090FF] hover:bg-[#0090FF]/90 text-white font-bold px-8 py-3 rounded-full"
               >
                 <Link href="#get-started" onClick={(e) => smoothScroll(e, 'get-started')}>
                   Get Started
                 </Link>
               </Button>
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
                 className="bg-transparent hover:bg-gray-800 text-white border-gray-600 hover:border-gray-500 px-8 py-3 rounded-full"
               >
                 <Link href="https://github.com/FIL-Builders/fil-frame" target="_blank" rel="noopener noreferrer">
@@ -201,30 +202,100 @@ export default function AppPage() {
           </motion.div>
         </section>
 
+        <section id="get-started" className="py-24 bg-[#0D0E12] pt-32 relative overflow-hidden">
+          {/* Geometric shapes */}
+          <div className="absolute inset-0 pointer-events-none">
+            <Image
+              src="/Blue Square.png"
+              alt=""
+              width={80}
+              height={80}
+              className="absolute top-[8%] right-[5%] transform rotate-[7.07deg] opacity-5"
+            />
+            <Image
+              src="/Red Arrow.png"
+              alt=""
+              width={70}
+              height={70}
+              className="absolute top-[15%] left-[8%] transform rotate-[13.6deg] opacity-5"
+            />
+            <Image
+              src="/Yellow Circle.png"
+              alt=""
+              width={60}
+              height={60}
+              className="absolute bottom-[10%] right-[12%] transform rotate-[10.38deg] opacity-5"
+            />
+          </div>
+
+          <div className="container mx-auto px-6 relative">
+            {/* Line decoration */}
+            <div className="absolute left-0 top-24 w-16 h-0.5 bg-[#0090FF] opacity-20 transform -rotate-[13.6deg]" />
+            <div className="absolute right-0 top-24 w-16 h-0.5 bg-[#0090FF] opacity-20 transform rotate-[13.6deg]" />
+
+            <h2 className="text-4xl font-bold mb-16 text-center text-white relative">
+              Builders Ship Faster With FIL-Frame
+              <div className="absolute -right-4 -top-4 w-8 h-8 opacity-10">
+                <Image
+                  src="/Red Star.png"
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="transform rotate-[7.07deg]"
+                />
+              </div>
+            </h2>
+
+            <div className="max-w-3xl mx-auto">
+              <Card className="bg-[#1E2029] border-[#2E3039]">
+                <CardContent className="p-8">
+                  <div className="space-y-8">
+                    {[
+                      { number: 1, title: "Create a new FIL-Frame project", command: "npx create-filecoin-app", copy: true },
+                      {
+                        number: 2, title: "You will be prompted to answer a series of questions to configure your new project as mentioned below.", command: `- What is your project name?   
+- Which storage provider would you like to use?.
+- Which package manager would you like to use?`
+                        , copy: false
+                      },
+                      { number: 3, title: "Navigate to your project directory", command: "cd nameOfYourApp", copy: true },
+                      { number: 4, title: "Compiling Smart Contracts", command: "yarn compile", copy: true },
+                      { number: 5, title: "Deploying Smart Contracts", command: "yarn deploy", copy: true },
+                      { number: 6, title: "Start the development server", command: "yarn run dev", copy: true },
+                    ].map((step, index) => (
+                      <Step key={index} {...step} />
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         <section id="features" className="py-24 bg-[#0D0E12] pt-32 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
-            <Image 
+            <Image
               src="/Blue Square.png"
               alt=""
               width={80}
               height={80}
               className="absolute top-[5%] left-[5%] transform rotate-[7.07deg] opacity-5"
             />
-            <Image 
+            <Image
               src="/Yellow Circle.png"
               alt=""
               width={70}
               height={70}
               className="absolute top-[10%] right-[8%] transform rotate-[10.38deg] opacity-5"
             />
-            <Image 
+            <Image
               src="/Red Star.png"
               alt=""
               width={60}
               height={60}
               className="absolute bottom-[8%] left-[10%] transform rotate-[13.6deg] opacity-5"
             />
-            <Image 
+            <Image
               src="/Red Arrow.png"
               alt=""
               width={70}
@@ -237,7 +308,7 @@ export default function AppPage() {
             {/* Line decoration */}
             <div className="absolute left-0 top-24 w-16 h-0.5 bg-[#0090FF] opacity-20 transform -rotate-[13.6deg]" />
             <div className="absolute right-0 top-24 w-16 h-0.5 bg-[#0090FF] opacity-20 transform rotate-[13.6deg]" />
-            
+
             <div className="relative">
               <div className="absolute -left-8 top-1/2 w-4 h-0.5 bg-[#0090FF] opacity-20 transform -rotate-[13.6deg]" />
               <div className="absolute -right-8 top-1/2 w-4 h-0.5 bg-[#0090FF] opacity-20 transform rotate-[13.6deg]" />
@@ -245,7 +316,7 @@ export default function AppPage() {
                 Ready-to-use Filecoin Components
                 {/* Geometric accent */}
                 <div className="absolute -right-4 -top-4 w-8 h-8 opacity-10">
-                  <Image 
+                  <Image
                     src="/Blue Square.png"
                     alt=""
                     width={32}
@@ -314,11 +385,11 @@ export default function AppPage() {
                   link="https://www.lighthouse.storage/"
                 />
                 <IntegrationCard
-                  icon={<Image 
-                    src="/Storacha.png" 
-                    alt="Storacha" 
-                    width={64} 
-                    height={64} 
+                  icon={<Image
+                    src="/Storacha.png"
+                    alt="Storacha"
+                    width={64}
+                    height={64}
                     className="rounded-full"
                   />}
                   title="Storacha"
@@ -326,10 +397,10 @@ export default function AppPage() {
                   link="https://github.com/FIL-Builders/fil-frame/tree/storacha-nfts"
                 />
                 <IntegrationCard
-                  icon={<Image 
-                    src="/Akave.png" 
-                    alt="Akave" 
-                    width={64} 
+                  icon={<Image
+                    src="/Akave.png"
+                    alt="Akave"
+                    width={64}
                     height={64}
                     className="rounded-full"
                   />}
@@ -364,68 +435,7 @@ export default function AppPage() {
           </div>
         </section>
 
-        <section id="get-started" className="py-24 bg-[#0D0E12] pt-32 relative overflow-hidden">
-          {/* Geometric shapes */}
-          <div className="absolute inset-0 pointer-events-none">
-            <Image 
-              src="/Blue Square.png"
-              alt=""
-              width={80}
-              height={80}
-              className="absolute top-[8%] right-[5%] transform rotate-[7.07deg] opacity-5"
-            />
-            <Image 
-              src="/Red Arrow.png"
-              alt=""
-              width={70}
-              height={70}
-              className="absolute top-[15%] left-[8%] transform rotate-[13.6deg] opacity-5"
-            />
-            <Image 
-              src="/Yellow Circle.png"
-              alt=""
-              width={60}
-              height={60}
-              className="absolute bottom-[10%] right-[12%] transform rotate-[10.38deg] opacity-5"
-            />
-          </div>
 
-          <div className="container mx-auto px-6 relative">
-            {/* Line decoration */}
-            <div className="absolute left-0 top-24 w-16 h-0.5 bg-[#0090FF] opacity-20 transform -rotate-[13.6deg]" />
-            <div className="absolute right-0 top-24 w-16 h-0.5 bg-[#0090FF] opacity-20 transform rotate-[13.6deg]" />
-            
-            <h2 className="text-4xl font-bold mb-16 text-center text-white relative">
-              Builders Ship Faster With FIL-Frame
-              <div className="absolute -right-4 -top-4 w-8 h-8 opacity-10">
-                <Image 
-                  src="/Red Star.png"
-                  alt=""
-                  width={32}
-                  height={32}
-                  className="transform rotate-[7.07deg]"
-                />
-              </div>
-            </h2>
-
-            <div className="max-w-3xl mx-auto">
-              <Card className="bg-[#1E2029] border-[#2E3039]">
-                <CardContent className="p-8">
-                  <div className="space-y-8">
-                    {[
-                      { number: 1, title: "Create a new FIL-Frame project", command: "npx create-fil-frame my-fil-app" },
-                      { number: 2, title: "Navigate to your project directory", command: "cd my-fil-app" },
-                      { number: 3, title: "Install dependencies", command: "npm install" },
-                      { number: 4, title: "Start the development server", command: "npm run dev" },
-                    ].map((step, index) => (
-                      <Step key={index} {...step} />
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer className="bg-[#1E2029] py-8 border-t border-[#2E3039]">
@@ -434,9 +444,9 @@ export default function AppPage() {
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <Link href="/" className="flex items-center space-x-4 mb-2">
                 <div className="relative w-48 h-8">
-                  <Image 
+                  <Image
                     src="/Filecoin x Fil-Builders.svg"
-                    alt="Filecoin x FIL-Builders Logo" 
+                    alt="Filecoin x FIL-Builders Logo"
                     fill
                     className="object-contain"
                     priority
@@ -478,12 +488,12 @@ export default function AppPage() {
                 <Image src="/Discord Icon.png" alt="Discord" width={20} height={20} className="text-gray-400 hover:text-white" />
               </Link>
               <Link href="https://x.com/FILBuilders" target="_blank" rel="noopener noreferrer">
-                <Image 
-                  src="/X Social Media Icon.png" 
-                  alt="X (formerly Twitter)" 
-                  width={20} 
+                <Image
+                  src="/X Social Media Icon.png"
+                  alt="X (formerly Twitter)"
+                  width={20}
                   height={20}
-                  className="opacity-60 hover:opacity-100 transition-opacity" 
+                  className="opacity-60 hover:opacity-100 transition-opacity"
                 />
               </Link>
             </div>
@@ -502,7 +512,7 @@ function FeatureCard({ icon, title, link, description }: { icon: React.ReactNode
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Card 
+    <Card
       className="bg-[#1E2029] border-gray-700 hover:border-blue-500 transition-colors cursor-pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
@@ -519,9 +529,9 @@ function FeatureCard({ icon, title, link, description }: { icon: React.ReactNode
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ 
-                type: "spring", 
-                stiffness: 300, 
+              transition={{
+                type: "spring",
+                stiffness: 300,
                 damping: 30,
                 opacity: { duration: 0.2 }
               }}
@@ -531,10 +541,10 @@ function FeatureCard({ icon, title, link, description }: { icon: React.ReactNode
             </motion.div>
           )}
         </AnimatePresence>
-        <Button 
-          asChild 
-          variant="ghost" 
-          size="sm" 
+        <Button
+          asChild
+          variant="ghost"
+          size="sm"
           className="mt-4 text-gray-400 hover:text-blue-300"
           onClick={(e) => e.stopPropagation()}
         >
@@ -610,11 +620,11 @@ const LighthouseIcon = (props: React.SVGProps<SVGSVGElement>) => (
     fill="currentColor"
     {...props}
   >
-    <path d="M1,10.5h2.75l1.25,1.25L7.25,10.5H11l1.25,1.25L14.5,10.5H22c0.55,0,1,0.45,1,1v8c0,0.55-0.45,1-1,1H2c-0.55,0-1-0.45-1-1 V10.5z M6,18.5h12v-1.5H6V18.5z M5.58,2.19L4.16,3.61l2.55,2.55L4.16,8.72l1.42,1.42L8.14,7.58l2.55,2.55l1.42-1.42L9.55,6.16 l2.55-2.55L10.69,2.19L8.14,4.74L5.58,2.19z"/>
+    <path d="M1,10.5h2.75l1.25,1.25L7.25,10.5H11l1.25,1.25L14.5,10.5H22c0.55,0,1,0.45,1,1v8c0,0.55-0.45,1-1,1H2c-0.55,0-1-0.45-1-1 V10.5z M6,18.5h12v-1.5H6V18.5z M5.58,2.19L4.16,3.61l2.55,2.55L4.16,8.72l1.42,1.42L8.14,7.58l2.55,2.55l1.42-1.42L9.55,6.16 l2.55-2.55L10.69,2.19L8.14,4.74L5.58,2.19z" />
   </svg>
 )
 
-function Step({ number, title, command }: { number: number; title: string; command: string }) {
+function Step({ number, title, command, copy }: { number: number; title: string; command: string; copy: boolean }) {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {
@@ -630,15 +640,19 @@ function Step({ number, title, command }: { number: number; title: string; comma
       </div>
       <div className="flex-grow">
         <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+
         <div className="bg-[#2E3039] rounded-lg p-3 flex items-center justify-between">
-          <code className="text-sm font-mono text-gray-200">{command}</code>
+          <code className="text-sm font-mono text-gray-200 whitespace-pre" >{command}</code>
           <Button
             variant="ghost"
             size="sm"
             onClick={copyToClipboard}
             className="text-gray-400 hover:text-white"
           >
-            {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+            <>
+              {copy ? <>{copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}</> : <></>}
+            </>
+
           </Button>
         </div>
       </div>
