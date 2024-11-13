@@ -11,8 +11,8 @@ const quicksand = Quicksand({
 });
 
 export const metadata = {
-  title: 'Filecoin Developer Console',
-  description: 'A comprehensive toolkit for Filecoin development',
+  title: 'FIL FRAME',
+  description: 'A Filecoin dApp Starter Kit',
 }
 
 export default function RootLayout({

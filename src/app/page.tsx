@@ -394,7 +394,7 @@ export default function AppPage() {
                   />}
                   title="Storacha"
                   description="Simplified storage management and deal-making for Filecoin network"
-                  link="https://github.com/FIL-Builders/fil-frame/tree/storacha-nfts"
+                  link="https://storacha.network/"
                 />
                 <IntegrationCard
                   icon={<Image
