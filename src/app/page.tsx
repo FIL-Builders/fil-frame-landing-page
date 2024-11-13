@@ -70,7 +70,7 @@ export default function AppPage() {
           <Link href="/" className="flex items-center space-x-4">
             <div className="relative w-48 h-8">
               <Image
-                src="/Filecoin x Fil-Builders.svg"
+                src="/fil-b-logo.png"
                 alt="Filecoin x FIL-Builders Logo"
                 fill
                 className="object-contain"
@@ -81,7 +81,7 @@ export default function AppPage() {
           <nav className="flex items-center space-x-8">
             <Link href="#features" onClick={(e) => smoothScroll(e, 'features')} className="text-sm font-medium text-gray-300 hover:text-white">Features</Link>
             <Link href="#integrations" onClick={(e) => smoothScroll(e, 'integrations')} className="text-sm font-medium text-gray-300 hover:text-white">Integrations</Link>
-            <Link href="#get-started" onClick={(e) => smoothScroll(e, 'get-started')} className="text-sm font-medium text-gray-300 hover:text-white">Get Started</Link>
+            {/* <Link href="#get-started" onClick={(e) => smoothScroll(e, 'get-started')} className="text-sm font-medium text-gray-300 hover:text-white">Get Started</Link> */}
             <Link href="https://github.com/FIL-Builders/fil-frame" target="_blank" rel="noopener noreferrer">
               <Github className="h-6 w-6 text-gray-300 hover:text-white" />
             </Link>
@@ -445,7 +445,7 @@ export default function AppPage() {
               <Link href="/" className="flex items-center space-x-4 mb-2">
                 <div className="relative w-48 h-8">
                   <Image
-                    src="/Filecoin x Fil-Builders.svg"
+                    src="/fil-b-logo.png"
                     alt="Filecoin x FIL-Builders Logo"
                     fill
                     className="object-contain"
