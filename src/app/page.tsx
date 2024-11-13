@@ -360,7 +360,7 @@ npx create-filecoin-app my-app --storacha`, copy: false }
               <FeatureCard
                 icon={<RefreshCw className="h-10 w-10 text-[#0090FF]" />}
                 title="Proofs"
-                link="https://docs.filecoin.io/basics/how-storage-works/filecoin-plus"
+                link="https://docs.filecoin.io/basics/the-blockchain/proofs"
                 description="Generate proofs of storage using Filecoin Plus, or use your own proof generation smart contract for custom implementations."
               />
               <FeatureCard
