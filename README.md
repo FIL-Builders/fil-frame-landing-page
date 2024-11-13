@@ -17,66 +17,50 @@ FIL-Frame is a comprehensive toolkit designed to jumpstart your Filecoin develop
 - **Proof Generation**: Implement Filecoin Plus storage proofs
 - **Smart Contracts**: Deploy and manage Filecoin smart contracts
 
-### Storage Onramps
+### Pre-configured Storage Quickstarts
 
-Simplified storage solutions with our trusted partners:
+Get started quickly with our pre-configured templates:
 
-- **Lighthouse**: Decentralized storage with perpetual file storage and encryption
-- **Storacha**: Simplified storage management and deal-making
-- **Akave**: Enterprise-grade storage solutions
+- **Lighthouse Template**: Quickstart with Lighthouse storage integration, including NFT examples and encryption features
+- **Storacha Template**: Ready-to-use template with Storacha NFT integration and storage management features
+- **Akave Template** (Coming Soon): Enterprise-grade storage solutions
 
 ### Ecosystem Integrations
 
-Enhance your dApps with powerful integrations:
+Enhance your dApps with powerful integrations (Coming Soon):
 
 - **Axelar**: Secure cross-chain communication for Web3 applications
 - **Lit Protocol**: Decentralized key management network
 
 ## Getting Started
 
-1. Create a new FIL-Frame project:
+Create a new FIL-Frame project:
 
 ```bash
-npx create-fil-frame my-fil-app
+npx create-filecoin-app my-app
 ```
 
-2.Navigate to the project directory:
+Navigate to your project directory:
 
 ```bash
-cd my-fil-app
+cd my-app
 ```
 
-3.Install dependencies using your preferred package manager:
+Start the development server:
 
 ```bash
-npm install
+yarn dev
 ```
 
-or
+### Using with Specific Integrations
 
 ```bash
-yarn install
+# For Lighthouse integration:
+npx create-filecoin-app my-app --lighthouse
+
+# For Storacha NFT integration:
+npx create-filecoin-app my-app --storacha
 ```
-
-or
-
-```bash
-pnpm install
-```
-
-or
-
-```bash
-bun install
-```
-
-4.Start the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view your application.
 
 ## Tech Stack
 
@@ -84,7 +68,7 @@ Open [http://localhost:3000](http://localhost:3000) to view your application.
 - TypeScript
 - Tailwind CSS
 - Framer Motion
-- ShadcnUI
+- shadcn/ui
 - Radix UI
 
 ## Documentation
@@ -94,7 +78,7 @@ Visit our documentation sections:
 - [Storage Deals](https://docs.filecoin.io/builder-cookbook/data-storage/store-data)
 - [Data Retrieval](https://docs.filecoin.io/builder-cookbook/data-storage/retrieve-data)
 - [Smart Contracts](https://docs.filecoin.io/smart-contracts/fundamentals/basics/)
-- [FVM Basics](https://docs.filecoin.io/smart-contracts/fundamentals/basics/)
+- [FVM](https://docs.filecoin.io/smart-contracts/fundamentals/the-fvm)
 
 ## Community
 
@@ -106,7 +90,7 @@ Join our community:
 
 ## Contributing
 
-We welcome contributions! Please read our contributing guidelines before submitting pull requests.
+We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING.md) before submitting pull requests.
 
 ## Support
 
