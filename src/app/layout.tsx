@@ -14,7 +14,12 @@ export const metadata = {
   title: 'FIL-Frame | Build Filecoin dApps Faster',
   description: 'Start building decentralized applications on Filecoin in minutes with pre-configured templates, React components, and storage integrations like Lighthouse. Zero configuration required.',
   icons: {
-    icon: '/fil-favicon.ico',
+    icon: [
+      { url: '/fil-favicon.ico', type: 'image/x-icon' },
+      { url: '/fil-favicon.ico', type: 'image/ico' },
+    ],
+    shortcut: '/fil-favicon.ico',
+    apple: '/fil-favicon.ico',
   },
   keywords: 'Filecoin, dApp Development, Web3, Blockchain, Developer Tools, React Components, Storage Providers, Lighthouse, Smart Contracts, TypeScript, Decentralized Storage',
   openGraph: {
