@@ -39,7 +39,6 @@ export default function AppPage() {
   const { toast } = useToast();
   const [activeTab, setActiveTab] = useState<PackageManager>('npm');
   const [copied, setCopied] = useState(false);
-  const [showSurvey, setShowSurvey] = useState(false);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -52,16 +51,11 @@ export default function AppPage() {
   };
 
   const installCommands: Record<PackageManager, string> = {
-    npm: 'npx create-filecoin-app my-app',
-    yarn: 'yarn create filecoin-app my-app',
-    pnpm: 'pnpm create filecoin-app my-app',
-    bun: 'bunx create-filecoin-app my-app'
+    npm: 'npx create-filecoin-app',
+    yarn: 'yarn create filecoin-app',
+    pnpm: 'pnpm create filecoin-app',
+    bun: 'bunx create-filecoin-app'
   };
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => setShowSurvey(true), 60000); // Show survey after 1 minute.
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="flex flex-col min-h-screen bg-[#0D0E12] text-gray-100">
@@ -387,7 +381,7 @@ npx create-filecoin-app my-app --storacha`, copy: false }
                   icon={<Image src="/Lighthouse Logo.jpg" alt="Lighthouse" width={64} height={64} className="rounded-full" />}
                   title="Lighthouse Template"
                   description="Quickstart with Lighthouse storage integration, including NFT examples and encryption features"
-                  link="https://github.com/FIL-Builders/fil-frame/tree/lighthouse"
+                  link="https://github.com/FIL-Builders/fil-frame/tree/lighthouse-nfts"
                 />
                 <IntegrationCard
                   icon={<Image src="/Storacha.png" alt="Storacha" width={64} height={64} className="rounded-full" />}
@@ -397,10 +391,9 @@ npx create-filecoin-app my-app --storacha`, copy: false }
                 />
                 <IntegrationCard
                   icon={<Image src="/Akave.png" alt="Akave" width={64} height={64} className="rounded-full" />}
-                  title="Akave Template (Coming Soon)"
+                  title="Akave Template"
                   description="Enterprise-grade storage solutions with advanced data management features"
-                  link="#"
-                  comingSoon={true}
+                  link="https://github.com/FIL-Builders/fil-frame/tree/akave-integration"
                 />
               </div>
             </div>
@@ -414,16 +407,15 @@ npx create-filecoin-app my-app --storacha`, copy: false }
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <IntegrationCard
                   icon={<Image src="/Axelar Logo.svg" alt="Axelar" width={64} height={64} />}
-                  title="Axelar Integration (Coming Soon)"
+                  title="Axelar Template"
                   description="Secure cross-chain communication for Web3 applications and assets"
-                  link="#"
-                  comingSoon={true}
+                  link="https://github.com/FIL-Builders/fil-frame/tree/axelar-integration"
                 />
                 <IntegrationCard
                   icon={<Image src="/Lit Logomark White.svg" alt="Lit Protocol" width={64} height={64} />}
-                  title="Lit Protocol Integration (Coming Soon)"
+                  title="Lit Protocol Template"
                   description="Decentralized key management network for blockchain-based access control"
-                  link="#"
+                  link="https://github.com/FIL-Builders/fil-frame/tree/lit-protocol"
                   comingSoon={true}
                 />
               </div>
@@ -496,10 +488,6 @@ npx create-filecoin-app my-app --storacha`, copy: false }
           </div>
         </div>
       </footer>
-
-      {showSurvey && (
-        <DevSurvey onClose={() => setShowSurvey(false)} />
-      )}
     </div>
   );
 }
