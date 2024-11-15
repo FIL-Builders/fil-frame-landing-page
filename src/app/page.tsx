@@ -39,7 +39,6 @@ export default function AppPage() {
   const { toast } = useToast();
   const [activeTab, setActiveTab] = useState<PackageManager>('npm');
   const [copied, setCopied] = useState(false);
-  const [showSurvey, setShowSurvey] = useState(false);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -52,16 +51,11 @@ export default function AppPage() {
   };
 
   const installCommands: Record<PackageManager, string> = {
-    npm: 'npx create-filecoin-app my-app',
-    yarn: 'yarn create filecoin-app my-app',
-    pnpm: 'pnpm create filecoin-app my-app',
-    bun: 'bunx create-filecoin-app my-app'
+    npm: 'npx create-filecoin-app',
+    yarn: 'yarn create filecoin-app',
+    pnpm: 'pnpm create filecoin-app',
+    bun: 'bunx create-filecoin-app'
   };
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => setShowSurvey(true), 60000); // Show survey after 1 minute.
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="flex flex-col min-h-screen bg-[#0D0E12] text-gray-100">
@@ -81,7 +75,14 @@ export default function AppPage() {
           <nav className="flex items-center space-x-8">
             <Link href="#features" onClick={(e) => smoothScroll(e, 'features')} className="text-sm font-medium text-gray-300 hover:text-white">Features</Link>
             <Link href="#integrations" onClick={(e) => smoothScroll(e, 'integrations')} className="text-sm font-medium text-gray-300 hover:text-white">Integrations</Link>
-            {/* <Link href="#get-started" onClick={(e) => smoothScroll(e, 'get-started')} className="text-sm font-medium text-gray-300 hover:text-white">Get Started</Link> */}
+            <Link 
+              href="https://github.com/FIL-Builders/fil-frame#readme" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-gray-300 hover:text-white"
+            >
+              Get Started
+            </Link>
             <Link href="https://github.com/FIL-Builders/fil-frame" target="_blank" rel="noopener noreferrer">
               <Github className="h-6 w-6 text-gray-300 hover:text-white" />
             </Link>
@@ -135,9 +136,9 @@ export default function AppPage() {
               FIL-Frame
             </motion.h1>
             <motion.p variants={itemVariants} className="text-xl mb-12 text-gray-300 max-w-2xl mx-auto">
-              Your quickstart for building apps on Filecoin with ready-to-use React components and TypeScript utilities.
+              Zero-configuration CLI tool for building Filecoin applications with ready-to-use React components and storage integrations.
             </motion.p>
-            {/* <motion.div variants={itemVariants} className="mb-12 max-w-xl mx-auto">
+            <motion.div variants={itemVariants} className="mb-12 max-w-xl mx-auto">
               <Card className="bg-[#1E2029] border-[#2E3039] hover:border-[#0090FF] transition-all duration-300 shadow-lg shadow-black/10 overflow-hidden"> 
                 <CardContent className="p-0">
                   <div className="flex border-b border-[#2E3039]">
@@ -175,7 +176,7 @@ export default function AppPage() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div> */}
+            </motion.div>
 
             <motion.div variants={itemVariants} className="flex justify-center space-x-4">
               <Button
@@ -183,8 +184,8 @@ export default function AppPage() {
                 size="lg"
                 className="bg-[#0090FF] hover:bg-[#0090FF]/90 text-white font-bold px-8 py-3 rounded-full"
               >
-                <Link href="#get-started" onClick={(e) => smoothScroll(e, 'get-started')}>
-                  Get Started
+                <Link href="#installation" onClick={(e) => smoothScroll(e, 'installation')}>
+                  Quick Start
                 </Link>
               </Button>
               <Button
@@ -202,7 +203,7 @@ export default function AppPage() {
           </motion.div>
         </section>
 
-        <section id="get-started" className="py-24 bg-[#0D0E12] pt-32 relative overflow-hidden">
+        <section id="installation" className="py-24 bg-[#0D0E12] pt-32 relative overflow-hidden">
           {/* Geometric shapes */}
           <div className="absolute inset-0 pointer-events-none">
             <Image
@@ -234,7 +235,7 @@ export default function AppPage() {
             <div className="absolute right-0 top-24 w-16 h-0.5 bg-[#0090FF] opacity-20 transform rotate-[13.6deg]" />
 
             <h2 className="text-4xl font-bold mb-16 text-center text-white relative">
-              Builders Ship Faster With FIL-Frame
+              Get Started with FIL-Frame
               <div className="absolute -right-4 -top-4 w-8 h-8 opacity-10">
                 <Image
                   src="/Red Star.png"
@@ -251,17 +252,14 @@ export default function AppPage() {
                 <CardContent className="p-8">
                   <div className="space-y-8">
                     {[
-                      { number: 1, title: "Create a new FIL-Frame project", command: "npx create-filecoin-app", copy: true },
-                      {
-                        number: 2, title: "You will be prompted to answer a series of questions to configure your new project as mentioned below.", command: `- What is your project name?   
-- Which storage provider would you like to use?.
-- Which package manager would you like to use?`
-                        , copy: false
-                      },
-                      { number: 3, title: "Navigate to your project directory", command: "cd nameOfYourApp", copy: true },
-                      { number: 4, title: "Compiling Smart Contracts", command: "yarn compile", copy: true },
-                      { number: 5, title: "Deploying Smart Contracts", command: "yarn deploy", copy: true },
-                      { number: 6, title: "Start the development server", command: "yarn run dev", copy: true },
+                      { number: 1, title: "Create a new FIL-Frame project", command: "npx create-filecoin-app my-app", copy: true },
+                      { number: 2, title: "Navigate to your project directory", command: "cd my-app", copy: true },
+                      { number: 3, title: "Start the development server", command: "yarn dev", copy: true },
+                      { number: 4, title: "Optional: Using with specific integrations", command: `# For Lighthouse integration:
+npx create-filecoin-app my-app --lighthouse
+
+# For Storacha NFT integration:
+npx create-filecoin-app my-app --storacha`, copy: false }
                     ].map((step, index) => (
                       <Step key={index} {...step} />
                     ))}
@@ -356,7 +354,7 @@ export default function AppPage() {
               <FeatureCard
                 icon={<RefreshCw className="h-10 w-10 text-[#0090FF]" />}
                 title="Proofs"
-                link="https://docs.filecoin.io/basics/how-storage-works/filecoin-plus"
+                link="https://docs.filecoin.io/basics/the-blockchain/proofs"
                 description="Generate proofs of storage using Filecoin Plus, or use your own proof generation smart contract for custom implementations."
               />
               <FeatureCard
@@ -373,40 +371,29 @@ export default function AppPage() {
           <div className="container mx-auto px-6">
             {/* Storage Onramps */}
             <div className="mb-24">
-              <h2 className="text-4xl font-bold mb-6 text-center text-white">Easy Storage and Retrieval with Storage Onramps</h2>
+              <h2 className="text-4xl font-bold mb-6 text-center text-white">Pre-configured Storage Quickstarts</h2>
               <p className="text-gray-300 text-center mb-16 max-w-3xl mx-auto">
-                Get started quickly with battle-tested storage providers and onramps for seamless data management on Filecoin.
+                Get started quickly with our pre-configured templates for popular Filecoin storage providers and onramps.
+                Each integration comes with complete examples and documentation.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <IntegrationCard
                   icon={<Image src="/Lighthouse Logo.jpg" alt="Lighthouse" width={64} height={64} className="rounded-full" />}
-                  title="Lighthouse"
-                  description="Decentralized storage solutions with perpetual file storage and built-in encryption"
-                  link="https://www.lighthouse.storage/"
+                  title="Lighthouse Template"
+                  description="Quickstart with Lighthouse storage integration, including NFT examples and encryption features"
+                  link="https://github.com/FIL-Builders/fil-frame/tree/lighthouse-nfts"
                 />
                 <IntegrationCard
-                  icon={<Image
-                    src="/Storacha.png"
-                    alt="Storacha"
-                    width={64}
-                    height={64}
-                    className="rounded-full"
-                  />}
-                  title="Storacha"
-                  description="Simplified storage management and deal-making for Filecoin network"
-                  link="https://storacha.network/"
+                  icon={<Image src="/Storacha.png" alt="Storacha" width={64} height={64} className="rounded-full" />}
+                  title="Storacha Template"
+                  description="Ready-to-use template with Storacha NFT integration and storage management features"
+                  link="https://github.com/FIL-Builders/fil-frame/tree/storacha-nfts"
                 />
                 <IntegrationCard
-                  icon={<Image
-                    src="/Akave.png"
-                    alt="Akave"
-                    width={64}
-                    height={64}
-                    className="rounded-full"
-                  />}
-                  title="Akave"
+                  icon={<Image src="/Akave.png" alt="Akave" width={64} height={64} className="rounded-full" />}
+                  title="Akave Template"
                   description="Enterprise-grade storage solutions with advanced data management features"
-                  link="https://akave.ai/"
+                  link="https://github.com/FIL-Builders/fil-frame/tree/akave-integration"
                 />
               </div>
             </div>
@@ -420,15 +407,15 @@ export default function AppPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <IntegrationCard
                   icon={<Image src="/Axelar Logo.svg" alt="Axelar" width={64} height={64} />}
-                  title="Axelar"
+                  title="Axelar Template"
                   description="Secure cross-chain communication for Web3 applications and assets"
-                  link="https://axelar.network/"
+                  link="https://github.com/FIL-Builders/fil-frame/tree/axelar-integration"
                 />
                 <IntegrationCard
                   icon={<Image src="/Lit Logomark White.svg" alt="Lit Protocol" width={64} height={64} />}
-                  title="Lit Protocol"
+                  title="Lit Protocol Template"
                   description="Decentralized key management network for blockchain-based access control"
-                  link="https://litprotocol.com/"
+                  link="https://github.com/FIL-Builders/fil-frame/tree/storacha-nfts"
                 />
               </div>
             </div>
@@ -500,10 +487,6 @@ export default function AppPage() {
           </div>
         </div>
       </footer>
-
-      {showSurvey && (
-        <DevSurvey onClose={() => setShowSurvey(false)} />
-      )}
     </div>
   );
 }
@@ -595,20 +578,36 @@ function DevSurvey({ onClose }: { onClose: () => void }) {
   );
 }
 
-function IntegrationCard({ icon, title, description, link }: { icon: React.ReactNode; title: string; description: string; link: string }) {
+function IntegrationCard({ 
+  icon, 
+  title, 
+  description, 
+  link, 
+  comingSoon = false 
+}: { 
+  icon: React.ReactNode; 
+  title: string; 
+  description: string; 
+  link: string;
+  comingSoon?: boolean;
+}) {
   return (
-    <Card className="bg-[#1E2029] border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
+    <Card className={`bg-[#1E2029] border-gray-700 ${!comingSoon ? 'hover:border-blue-500' : ''} transition-all duration-300 transform ${!comingSoon ? 'hover:-translate-y-2' : ''}`}>
       <CardContent className="p-6 flex flex-col items-center text-center">
         <div className="mb-4">
           {icon}
         </div>
         <h3 className="title text-xl font-bold mb-2 text-white">{title}</h3>
         <p className="paragraph text-gray-300 mb-6">{description}</p>
-        <Button asChild variant="ghost" size="sm" className="text-gray-400 hover:text-blue-300">
-          <Link href={link} target="_blank" rel="noopener noreferrer">
-            Learn More →
-          </Link>
-        </Button>
+        {!comingSoon ? (
+          <Button asChild variant="ghost" size="sm" className="text-gray-400 hover:text-blue-300">
+            <Link href={link} target="_blank" rel="noopener noreferrer">
+              Learn More →
+            </Link>
+          </Button>
+        ) : (
+          <span className="text-sm text-gray-400">Coming Soon</span>
+        )}
       </CardContent>
     </Card>
   );
