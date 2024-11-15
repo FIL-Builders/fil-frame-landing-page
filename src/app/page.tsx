@@ -75,7 +75,6 @@ export default function AppPage() {
           <nav className="flex items-center space-x-8">
             <Link href="#features" onClick={(e) => smoothScroll(e, 'features')} className="text-sm font-medium text-gray-300 hover:text-white">Features</Link>
             <Link href="#integrations" onClick={(e) => smoothScroll(e, 'integrations')} className="text-sm font-medium text-gray-300 hover:text-white">Integrations</Link>
-<<<<<<< HEAD
             <Link 
               href="https://github.com/FIL-Builders/fil-frame#readme" 
               target="_blank" 
@@ -84,9 +83,6 @@ export default function AppPage() {
             >
               Get Started
             </Link>
-=======
-            {/* <Link href="#get-started" onClick={(e) => smoothScroll(e, 'get-started')} className="text-sm font-medium text-gray-300 hover:text-white">Get Started</Link> */}
->>>>>>> main
             <Link href="https://github.com/FIL-Builders/fil-frame" target="_blank" rel="noopener noreferrer">
               <Github className="h-6 w-6 text-gray-300 hover:text-white" />
             </Link>
@@ -388,23 +384,10 @@ npx create-filecoin-app my-app --storacha`, copy: false }
                   link="https://github.com/FIL-Builders/fil-frame/tree/lighthouse-nfts"
                 />
                 <IntegrationCard
-<<<<<<< HEAD
                   icon={<Image src="/Storacha.png" alt="Storacha" width={64} height={64} className="rounded-full" />}
                   title="Storacha Template"
                   description="Ready-to-use template with Storacha NFT integration and storage management features"
                   link="https://github.com/FIL-Builders/fil-frame/tree/storacha-nfts"
-=======
-                  icon={<Image
-                    src="/Storacha.png"
-                    alt="Storacha"
-                    width={64}
-                    height={64}
-                    className="rounded-full"
-                  />}
-                  title="Storacha"
-                  description="Simplified storage management and deal-making for Filecoin network"
-                  link="https://storacha.network/"
->>>>>>> main
                 />
                 <IntegrationCard
                   icon={<Image src="/Akave.png" alt="Akave" width={64} height={64} className="rounded-full" />}
