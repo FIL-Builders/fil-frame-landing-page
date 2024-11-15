@@ -11,6 +11,7 @@ const quicksand = Quicksand({
 });
 
 export const metadata = {
+<<<<<<< HEAD
   title: 'FIL-Frame | Build Filecoin dApps Faster',
   description: 'Start building decentralized applications on Filecoin in minutes with pre-configured templates, React components, and storage integrations like Lighthouse. Zero configuration required.',
   icons: {
@@ -45,6 +46,10 @@ export const metadata = {
     creator: '@FILBuilders',
     images: ['/og-image.png'],
   },
+=======
+  title: 'FIL FRAME',
+  description: 'A Filecoin dApp Starter Kit',
+>>>>>>> main
 }
 
 export default function RootLayout({
