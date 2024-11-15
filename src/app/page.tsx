@@ -415,8 +415,7 @@ npx create-filecoin-app my-app --storacha`, copy: false }
                   icon={<Image src="/Lit Logomark White.svg" alt="Lit Protocol" width={64} height={64} />}
                   title="Lit Protocol Template"
                   description="Decentralized key management network for blockchain-based access control"
-                  link="https://github.com/FIL-Builders/fil-frame/tree/lit-protocol"
-                  comingSoon={true}
+                  link="https://github.com/FIL-Builders/fil-frame/tree/storacha-nfts"
                 />
               </div>
             </div>
