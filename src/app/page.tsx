@@ -65,7 +65,7 @@ export default function AppPage() {
             <div className="relative w-48 h-8">
               <Image
                 src="/fil-b-logo.png"
-                alt="Filecoin x FIL-Builders Logo"
+                alt="FIL Builders Logo"
                 fill
                 className="object-contain"
                 priority

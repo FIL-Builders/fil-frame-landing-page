@@ -11,8 +11,8 @@ const quicksand = Quicksand({
 });
 
 export const metadata = {
-  title: 'FIL-Frame | Build Filecoin dApps Faster',
-  description: 'Start building decentralized applications on Filecoin in minutes with pre-configured templates, React components, and storage integrations like Lighthouse. Zero configuration required.',
+  title: 'FIL Frame | Build Filecoin Apps Faster',
+  description: 'Zero-configuration CLI tool for building Filecoin apps with ready-to-use React components and storage integrations.',
   icons: {
     icon: [
       { url: '/fil-favicon.ico', type: 'image/x-icon' },
@@ -23,8 +23,8 @@ export const metadata = {
   },
   keywords: 'Filecoin, dApp Development, Web3, Blockchain, Developer Tools, React Components, Storage Providers, Lighthouse, Smart Contracts, TypeScript, Decentralized Storage',
   openGraph: {
-    title: 'FIL-Frame | Build Filecoin dApps Faster',
-    description: 'Start building decentralized applications on Filecoin in minutes with pre-configured templates, React components, and storage integrations like Lighthouse. Zero configuration required.',
+    title: 'FIL Frame | Build Filecoin Apps Faster',
+    description: 'Zero-configuration CLI tool for building Filecoin apps with ready-to-use React components and storage integrations.',
     url: 'https://fil-frame.vercel.app/',
     siteName: 'FIL-Frame',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'FIL-Frame - Zero-configuration CLI tool for building Filecoin applications'
+        alt: 'FIL Builders Logo'
       }
     ],
     locale: 'en-US',
@@ -40,8 +40,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image', 
-    title: 'FIL-Frame | Build Filecoin dApps Faster',
-    description: 'Start building decentralized applications on Filecoin in minutes with pre-configured templates, React components, and storage integrations like Lighthouse. Zero configuration required.',
+    title: 'FIL Frame | Build Filecoin Apps Faster',
+    description: 'Zero-configuration CLI tool for building Filecoin apps with ready-to-use React components and storage integrations.',
     creator: '@FILBuilders',
     images: ['/og-image.png'],
   },
