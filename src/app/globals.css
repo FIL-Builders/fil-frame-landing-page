@@ -18,32 +18,28 @@
 
 :root {
   /* Brand Colors */
-  --fil-blue: #0090FF;
-  --fil-secondary: #FA4747;
-  --fil-yellow: #FFE05F;
-  
+  --fil-blue: #0090ff;
+  --fil-secondary: #fa4747;
+  --fil-yellow: #ffe05f;
+
   /* Background Colors */
-  --background-start: #2A2B37;  
-  --background-end: #1B1C24;    
-  
+  --background-start: #2a2b37;
+  --background-end: #1b1c24;
+
   /* Background Colors */
-  --card-bg: #1F2030;          
-  --border-color: #2E3039;
-  
+  --card-bg: #1f2030;
+  --border-color: #2e3039;
+
   /* UI colors */
   --foreground: 255, 255, 255;
-  
+
   /* Brand-specific tokens */
-  --brand-gradient: linear-gradient(
-    to bottom,
-    var(--background-start),
-    var(--background-end)
-  );
-  
+  --brand-gradient: linear-gradient(to bottom, var(--background-start), var(--background-end));
+
   /* Mathematical Elements */
   --integral-rotation: 10.38deg;
   --bar-rotation: 13.6deg;
-  
+
   /* Brand rotations */
   --rotation-1: 7.07deg;
   --rotation-2: 13.6deg;
@@ -54,12 +50,23 @@
   body {
     background: var(--brand-gradient);
     color: rgb(var(--foreground));
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 
   /* Brand typography */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: system-ui, -apple-system, sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
     font-weight: 700;
   }
 
@@ -154,13 +161,13 @@
 
 /* Update existing color variables */
 :root {
-  --fil-blue: #0090FF;
-  --fil-secondary: #FA4747;
-  --fil-yellow: #FFE05F;
-  
-  --background-start: #1E1F2A;
-  --background-end: #12131A;
-  
+  --fil-blue: #0090ff;
+  --fil-secondary: #fa4747;
+  --fil-yellow: #ffe05f;
+
+  --background-start: #1e1f2a;
+  --background-end: #12131a;
+
   /* Add geometric shape angles */
   --angle-1: 7.07deg;
   --angle-2: 13.6deg;
@@ -179,7 +186,7 @@
 
 /* Feature cards */
 .feature-card {
-  @apply bg-[#1F2030] border border-[#2E3039] hover:border-[#0090FF] transition-all duration-300 transform hover:-translate-y-1;
+  @apply transform border border-[#2E3039] bg-[#1F2030] transition-all duration-300 hover:-translate-y-1 hover:border-[#0090FF];
   position: relative;
   overflow: hidden;
 }
@@ -205,7 +212,9 @@
 
 /* Card hover effects */
 .feature-card {
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .feature-card:hover {
@@ -224,7 +233,8 @@
 }
 
 /* Typography */
-h1, h2 {
+h1,
+h2 {
   font-family: 'Balgin', system-ui, sans-serif;
   font-weight: 800;
   letter-spacing: 0;
@@ -258,9 +268,8 @@ body {
   background: linear-gradient(to bottom, var(--background-start), var(--background-end));
 }
 
-
 .geometric-shape {
-  opacity: 0.25; 
+  opacity: 0.25;
 }
 
 /* Card text sizes */
@@ -269,7 +278,7 @@ body {
 }
 
 .feature-card p {
-  font-size: 1.125rem; 
+  font-size: 1.125rem;
 }
 
 /* integration card */
@@ -289,12 +298,12 @@ body {
 
 /* Header background */
 header {
-  @apply bg-[#1F2030]/95;  
+  @apply bg-[#1F2030]/95;
 }
 
 /* Card styles */
-.card, 
+.card,
 .integration-card,
-[class*="bg-[#1E2029]"] {
-  background-color: #1F2030;  
+[class*='bg-[#1E2029]'] {
+  background-color: #1f2030;
 }
