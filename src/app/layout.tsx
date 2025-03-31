@@ -10,6 +10,8 @@ const quicksand = Quicksand({
   variable: '--font-quicksand'
 });
 
+export const BASE_URL= "https://fil-frame.vercel.app/"
+
 export const metadata = {
   title: 'FIL Frame | Build Filecoin Apps Faster',
   description: 'Zero-configuration CLI tool for building Filecoin apps with ready-to-use React components and storage integrations.',
@@ -25,7 +27,7 @@ export const metadata = {
   openGraph: {
     title: 'FIL Frame | Build Filecoin Apps Faster',
     description: 'Zero-configuration CLI tool for building Filecoin apps with ready-to-use React components and storage integrations.',
-    url: 'https://fil-frame.vercel.app/',
+    url: BASE_URL,
     siteName: 'FIL-Frame',
     images: [
       {
