@@ -83,7 +83,7 @@ export default function AppPage() {
             >
               Get Started
             </Link>
-            <Link href="https://github.com/FIL-Builders/fil-frame" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/FIL-Builders/fil-frame" target="_blank" rel="noopener noreferrer"                 aria-label="View FIL-Frame source code on GitHub">
               <Github className="h-6 w-6 text-gray-300 hover:text-white" />
             </Link>
           </nav>
@@ -166,6 +166,7 @@ export default function AppPage() {
                       </code>
                     </pre>
                     <Button
+                      aria-label="Copy to clipboard"
                       variant="ghost"
                       size="sm"
                       className="absolute top-2 right-2 text-gray-400 hover:text-white"
@@ -443,7 +444,7 @@ npx create-filecoin-app my-app --storacha`, copy: false }
               <p className="text-sm text-gray-400 mb-2">
                 Your quickstart for building decentralized apps on Filecoin with ready-to-use React components and TypeScript utilities.
               </p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-400">
                 Built with <Heart size={12} className="inline-block mx-1 text-red-500" /> by FIL-B
               </p>
             </div>
@@ -466,21 +467,28 @@ npx create-filecoin-app my-app --storacha`, copy: false }
             </div>
           </div>
           <div className="mt-6 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-xs text-gray-500 mb-2 sm:mb-0">© 2024 FIL-Frame. All rights reserved.</p>
-            <div className="flex space-x-4">
-              <Link href="https://github.com/FIL-Builders/fil-frame" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5 text-gray-400 hover:text-white" />
+            <p className="text-xs text-gray-400 mb-2 sm:mb-0">© 2024 FIL-Frame. All rights reserved.</p>
+            <div className="grid grid-cols-3 gap-4">
+              <Link
+                href="https://github.com/FIL-Builders/fil-frame"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View FIL-Frame source code on GitHub"
+                className="flex items-center justify-center"
+              >
+                <Github className="h-5 w-5 text-gray-400 hover:text-white" aria-hidden="true" />
+                <span className="sr-only">GitHub Repository</span>
               </Link>
-              <Link href="https://discord.gg/filecoin" target="_blank" rel="noopener noreferrer">
+              <Link href="https://discord.gg/filecoin" target="_blank" rel="noopener noreferrer" aria-label="Join our Discord community">
                 <Image src="/Discord Icon.png" alt="Discord" width={20} height={20} className="text-gray-400 hover:text-white" />
               </Link>
-              <Link href="https://x.com/FILBuilders" target="_blank" rel="noopener noreferrer">
+              <Link href="https://x.com/FILBuilders" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X (formerly Twitter)">
                 <Image
                   src="/X Social Media Icon.png"
                   alt="X (formerly Twitter)"
                   width={20}
                   height={20}
-                  className="opacity-60 hover:opacity-100 transition-opacity"
+                  className="opacity-60 text-gray-400 hover:opacity-100 transition-opacity"
                 />
               </Link>
             </div>
@@ -643,6 +651,7 @@ function Step({ number, title, command, copy }: { number: number; title: string;
         <div className="bg-[#2E3039] rounded-lg p-3 flex items-center justify-between">
           <code className="text-sm font-mono text-gray-200 whitespace-pre" >{command}</code>
           <Button
+            aria-label="Copy to clipboard"
             variant="ghost"
             size="sm"
             onClick={copyToClipboard}
